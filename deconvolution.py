@@ -26,7 +26,7 @@ def biases(shape,verb=False,name='biases'):
     print(b)
   return(b)
 
-def deconv2(inp,shape,strides=[1,1,1,1],padding='SAME',relu=False,
+def deconv(inp,shape,strides=[1,1,1,1],padding='SAME',relu=False,
   verb=False,name='deconv',dropout=False,drop_prob=0.8,histogram=True,
   l2=False):
   """
