@@ -1,10 +1,7 @@
 # Deconvolution/Transpose Convolution - Tensorflow
----------
-
 Function used to reduce the number of lines used to create a transpose convolution in my day to day...
 
 ## How to use it?
---------
 So you want a deconvolution that can accept batches of [?,im_h,im_w,im_c] using a kernel of 3 by 3 that results in the same shape as the input?
 
 ```python
