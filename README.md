@@ -23,11 +23,11 @@ input_im = tf.placeholder(tf.float32,shape=[None,im_h,im_w,im_c])
 ks = 3 # Kernel size
 d_shape = [ks,ks,im_c,im_c]
 deconv1 = deconv(inp=input_im,
-				 shape=d_shape)
+                 shape=d_shape)
 
 with tf.Session as sess:
-	feed_dict = {input_im: im}
-	out = sess.run(deconv1,feed_dict=feed_dict)
+    feed_dict = {input_im: im}
+    out = sess.run(deconv1,feed_dict=feed_dict)
 ```
 
 Want to upsample by two your initial input of the deconvolution?
@@ -51,12 +51,12 @@ input_im = tf.placeholder(tf.float32,shape=[None,im_h,im_w,im_c])
 ks = 3 # Kernel size
 d_shape = [ks,ks,im_c,im_c]
 deconv1 = deconv(inp=input_im,
-				 shape=d_shape,
-				 strides=[1,2,2,1])
+                 shape=d_shape,
+                 strides=[1,2,2,1])
 
 with tf.Session as sess:
-	feed_dict = {input_im: im}
-	out = sess.run(deconv1,feed_dict=feed_dict)
+    feed_dict = {input_im: im}
+    out = sess.run(deconv1,feed_dict=feed_dict)
 ```
 
 ```
